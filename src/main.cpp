@@ -21,6 +21,9 @@
 #include <cstdlib>  // EXIT_SUCCESS
 #include <iostream>
 #include <iomanip>
+#include <fstream>
+#include <string.h>
+#include <vector>
 
 #include "tip.h"
 
@@ -62,6 +65,28 @@ int main(int argc, char* argv[])
 
     std::cout << "\n>>> Pretty print:" << '\n';
     std::cout << reader.pretty_print() << '\n';
+
+    class life{
+    private: //membros
+        int m_linhas;
+        int m_colunas;
+        char m_vivo;
+        std::vector<std::vector<int>> celula;
+    public: //metodos:
+        //montagem da tabela, leitura do arquivo
+         life(int linhas, int colunas){
+            m_linhas = linhas;
+            m_colunas = colunas;
+            for(int i = 0; i < linhas; i++){
+                celula.push_back(std::vector<int>());
+                for (int j = 0; j < colunas; j++){
+                    celula[i].push_back(0);
+                }
+            }
+        }
+            
+        
+        };
 
     return EXIT_SUCCESS;
 }

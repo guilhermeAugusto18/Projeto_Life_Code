@@ -10,7 +10,7 @@ namespace life {
 LifeCfg::LifeCfg()
 {
 }
-
+}
 // TODO
 
-}  // namespace life
+  // namespace life
